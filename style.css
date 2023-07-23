@@ -1,0 +1,118 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.hero-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hero-txt {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+.hero-txt h1 {
+	margin-bottom: 5px;
+	text-shadow: 3px 3px 5px black;
+	color: #ddd;
+}
+
+.hero-txt span {
+	text-transform: uppercase;
+	color: #09f;
+}
+
+/* NAWIGACJA */
+nav {
+	height: 60px;
+	line-height: 60px;
+	background-color: #ddd;
+	text-align: center;
+}
+
+.burger-icon {
+	display: block;
+	margin-left: auto;
+	padding: 0 30px;
+	line-height: 60px;
+	font-size: 30px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.burger-icon:hover {
+	color: #09f;
+}
+
+.nav-items {
+	display: none;
+}
+
+/* HEADER */
+
+.header {
+	position: relative;
+	background-image: url("./img/wolf-small.jpg");
+	height: 330px;
+	background-size: cover;
+	background-position: center;
+}
+
+@media (min-width: 768px) {
+	.burger-icon {
+		display: none;
+	}
+	.nav-items {
+		display: block;
+	}
+	.nav-items a {
+		padding: 0 30px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #333;
+	}
+
+	.nav-items a:hover {
+		color: #09f;
+	}
+	.header {
+		height: 400px;
+		background-image: url("./img/wolf-big.jpg");
+	}
+
+	.hero-txt h1 {
+		font-size: 36px;
+	}
+	.hero-txt p {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.hero-txt h1 {
+		font-size: 42px;
+	}
+	.hero-txt p {
+		font-size: 20px;
+	}
+}
